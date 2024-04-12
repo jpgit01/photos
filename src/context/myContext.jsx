@@ -7,16 +7,20 @@ export const Contexto = createContext();
 
 export default function UsoContexto({ children }) {
 
-    const [color, setColor]= useState('red')
+    const [datos, setDatos]= useState([])
+
+
 
     const getData = async()=>{
         const response = await fetch("../public/photos.json")
         const data = await response.json()
-        console.log(data)
+        setDatos(data.photos)
     }
+
     useEffect(()=>{
         getData()
     },[])
 
-  return <Contexto.Provider value={{color, setColor}}>{children}</Contexto.Provider>;
+
+  return <Contexto.Provider value={{datos, setDatos}}>{children}</Contexto.Provider>;
 }

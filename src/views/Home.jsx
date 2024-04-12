@@ -1,6 +1,4 @@
 import Gallery from "../components/Gallery";
-import { useContext } from "react";
-import { Contexto } from "../context/myContext";
 
 const Home = () => {
 
