@@ -4,12 +4,11 @@ import { Contexto } from "../context/myContext";
 
 const Home = () => {
 
-const contexto = useContext(Contexto)
 
   return (
     <div className="App">
 
-      <h1>Natural Pic {contexto.like}</h1>
+      <h1>Natural Pic</h1>
       <Gallery />
     </div>
   );

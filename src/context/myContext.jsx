@@ -1,11 +1,22 @@
 import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
+import { useEffect } from "react";
 
 export const Contexto = createContext();
 
 export default function UsoContexto({ children }) {
-const [like, setLike] = useState('false')
 
-  return <Contexto.Provider value={{like, setLike}}>{children}</Contexto.Provider>;
+    const [color, setColor]= useState('red')
+
+    const getData = async()=>{
+        const response = await fetch("../public/photos.json")
+        const data = await response.json()
+        console.log(data)
+    }
+    useEffect(()=>{
+        getData()
+    },[])
+
+  return <Contexto.Provider value={{color, setColor}}>{children}</Contexto.Provider>;
 }
