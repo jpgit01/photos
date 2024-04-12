@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Contexto } from "../context/myContext";
 
 import Card from "react-bootstrap/Card";
-import IconHeart from "./IconHeart";
 
 const Gallery = () => {
   const { datos, setDatos } = useContext(Contexto);
