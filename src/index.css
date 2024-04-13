@@ -4,8 +4,8 @@ body {
 
 .App {
   font-family: "Maitree", serif;
-  text-align: center;
   color: #43a047;
+  text-align: center;
 }
 
 h1 {
@@ -64,3 +64,4 @@ a {
 .p-3 {
   padding: 30px;
 }
+
