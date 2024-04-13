@@ -6,19 +6,17 @@ import Home from "./views/Home";
 
 import UsoContexto from "./context/myContext";
 
-const PHOTO_URL = "/photos.json";
-
 const App = () => {
   return (
-    <div>
+    <>
+    <Navbar />
       <UsoContexto>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favoritos" element={<Favorites />} />
         </Routes>
       </UsoContexto>
-    </div>
+      </>
   );
 };
 export default App;
